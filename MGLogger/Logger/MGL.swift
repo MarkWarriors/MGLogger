@@ -60,10 +60,10 @@ public class MGL {
     }
     
     
-    public static func setLogStyle(prefix: String, showCategories: Bool, showLevel: Bool){
+    public static func setLogStyle(prefix: String, showLevel: Bool, showCategories: Bool){
         self.logPrefix = prefix
-        self.showCategoriesInLog = showCategories
         self.showLevelInLog = showLevel
+        self.showCategoriesInLog = showCategories
     }
     
     public static func setLogDefaultLevel(_ level: LogLevel){

@@ -17,19 +17,19 @@ class ViewController: UIViewController {
         MGL.log("It Log!", level: .error)
         
         print("\n---- CHANGE STYLE, REMOVE LEVEL AND CATEGORIES")
-        MGL.setLogStyle(prefix: "Prefix", showCategories: false, showLevel: false)
-        MGL.log("It Log!", level: .verbose, category: .notSpecified)
-        
-        print("\n---- CHANGE STYLE, REMOVE LEVEL")
-        MGL.setLogStyle(prefix: "Prefix", showCategories: true, showLevel: false)
+        MGL.setLogStyle(prefix: "Prefix", showLevel: false, showCategories: false)
         MGL.log("It Log!", level: .verbose, category: .notSpecified)
         
         print("\n---- CHANGE STYLE, REMOVE CATEGORIES")
-        MGL.setLogStyle(prefix: "Prefix", showCategories: false, showLevel: true)
+        MGL.setLogStyle(prefix: "Prefix", showLevel: true, showCategories: false)
+        MGL.log("It Log!", level: .verbose, category: .notSpecified)
+        
+        print("\n---- CHANGE STYLE, REMOVE LEVEL")
+        MGL.setLogStyle(prefix: "Prefix", showLevel: false, showCategories: true)
         MGL.log("It Log!", level: .verbose, category: .notSpecified)
         
         
-        MGL.setLogStyle(prefix: "Prefix", showCategories: true, showLevel: true)
+        MGL.setLogStyle(prefix: "Prefix", showLevel: true, showCategories: true)
         print("\n\n-------- LOG WITH LEVEL")
         print("---- miniumum level WARNING")
         MGL.showLogWithMinimumLevel(.warning)
