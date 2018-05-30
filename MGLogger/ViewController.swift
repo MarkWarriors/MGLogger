@@ -12,9 +12,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("------ LOG VERBOSE")
-        MGL.log("It Log!", level: .error)
+
+        MGL.showLogWithMinimumLevel(.verbose)
+
+        print("------ LOG DIRECT CALL")
+        MGL.error("It Log!1")
+        MGL.warning("It Log!2")
+        MGL.info("It Log!3")
+        MGL.verbose("It Log!4")
+
+
+        print("------ LOG")
+        MGL.log("It Log!", level: .verbose)
         
         print("\n---- CHANGE STYLE, REMOVE LEVEL AND CATEGORIES")
         MGL.setLogStyle(prefix: "Prefix", showLevel: false, showCategories: false)

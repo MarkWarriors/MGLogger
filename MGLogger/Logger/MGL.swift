@@ -95,6 +95,22 @@ public class MGL {
         self.logType = .byLevelsForCategories
     }
     
+    public static func error(_ text: String, level: LogLevel? = defaultLevel, category: LogCategory? = defaultCategory) {
+        self.log(text, level: .error, categories: [category ?? defaultCategory])
+    }
+    
+    public static func warning(_ text: String, level: LogLevel? = defaultLevel, category: LogCategory? = defaultCategory) {
+        self.log(text, level: .warning, categories: [category ?? defaultCategory])
+    }
+    
+    public static func info(_ text: String, level: LogLevel? = defaultLevel, category: LogCategory? = defaultCategory) {
+        self.log(text, level: .info, categories: [category ?? defaultCategory])
+    }
+    
+    public static func verbose(_ text: String, level: LogLevel? = defaultLevel, category: LogCategory? = defaultCategory) {
+        self.log(text, level: .verbose, categories: [category ?? defaultCategory])
+    }
+    
     
     public static func log(_ text: String, level: LogLevel? = defaultLevel, category: LogCategory? = defaultCategory) {
         if level != .noLog {
