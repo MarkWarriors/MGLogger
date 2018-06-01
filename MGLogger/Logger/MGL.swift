@@ -57,6 +57,8 @@ public class MGL {
         case timing = "TIMING"
         case thread = "THREAD"
         case queue = "QUEUE"
+        case general = "GENERAL"
+        case demo = "DEMO"
     }
     
     
@@ -162,7 +164,10 @@ public class MGL {
     }
     
     private static func printLog(_ text: String, level: LogLevel, categories: [LogCategory]){
-        print("\(self.showLevelInLog || self.showCategoriesInLog ? "\(self.logPrefix) " : "\(self.logPrefix)")\(self.showLevelInLog ? "[\(String(describing: level).uppercased())]": "")\(self.showCategoriesInLog ? "[\(categories.map{String(describing: $0).uppercased()}.joined(separator: "|"))]": ""): \(text)")
+        let prefix = "\(self.logPrefix)\(self.showLevelInLog || self.showCategoriesInLog ? " " : "")"
+        let level = "\(self.showLevelInLog ? "[\(String(describing: level).uppercased())]": "")"
+        let category = "\(self.showCategoriesInLog ? "[\(categories.map{String(describing: $0).uppercased()}.joined(separator: "|"))]": "")"
+        print("\(prefix)\(category)\(level): \(text)")
     }
     
 }
