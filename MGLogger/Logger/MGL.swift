@@ -43,6 +43,7 @@ public class MGL {
     }
     
     public enum LogCategory: String {
+        case discovery = "DISCOVERY"
         case notSpecified = "NOTSPECIFIED"
         case custom = "CUSTOM"
         case connection = "CONNECTION"
@@ -52,13 +53,20 @@ public class MGL {
         case user = "USER"
         case login = "LOGIN"
         case interaction = "INTERACTION"
+        case notifications = "NOTIFICATIONS"
+        case pushNotification = "PUSHNOTIFICATION"
+        case localNotification = "LOCALNOTIFICATION"
+        case observer = "OBSERVER"
         case UI = "UI"
         case debug = "DEBUG"
         case timing = "TIMING"
         case thread = "THREAD"
         case queue = "QUEUE"
+        case firmware = "FIRMWARE"
+        case scenarios = "SCENARIOS"
         case general = "GENERAL"
         case demo = "DEMO"
+        case database = "DATABASE"
     }
     
     
